@@ -1,0 +1,14 @@
+%---------------------------------------------------------------------------%
+%->> Main content
+%---------------------------------------------------------------------------%
+\renewcommand{\thefigure}{\thechapter-\arabic{figure}}
+\renewcommand{\thetable}{\thechapter-\arabic{table}}
+\renewcommand{\theequation}{\thechapter-\arabic{equation}}
+
+% 【2025.5.26】根据最新的毕设要求，章节页无需从奇数页开始，若你的学院仍保留此要求，请注释下方的openany和openright
+\input{Tex/Chap_Intro}
+\openany
+\input{Tex/Chap_Guide}
+\input{Tex/Chap_UCAS}
+\openright
+%---------------------------------------------------------------------------%

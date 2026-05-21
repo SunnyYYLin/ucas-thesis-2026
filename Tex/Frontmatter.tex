@@ -1,0 +1,41 @@
+%---------------------------------------------------------------------------%
+%->> Frontmatter
+%---------------------------------------------------------------------------%
+%-
+%-> 生成封面
+%-
+
+\maketitle% 生成中文封面
+\MAKETITLE% 生成英文封面
+%-
+%-> 作者声明
+%-
+\makedeclaration% 生成声明页
+%-
+%-> 中文摘要
+%-
+\intobmk\chapter*{摘\quad 要}% 显示在书签但不显示在目录
+\setcounter{page}{1}% 开始页码
+\pagenumbering{Roman}% 页码符号
+
+【摘要内容】
+
+【注：中文摘要、英文摘要、目录、论文正文、参考文献、附录、致谢等均须由另页右页（奇数页）开始。】
+
+\keywords{【中文关键词】}% 中文关键词
+%-
+%-> 英文摘要
+%-
+\intobmk\chapter*{Abstract}% 显示在书签但不显示在目录
+
+【英文摘要内容】
+
+【注：英文摘要与中文摘要的内容应一致，在语法、用词上准确无误，关键词间隔用逗号分隔】
+    %- the current style, comment all the lines in plain style definition.
+
+\KEYWORDS{【英文关键词】}% 英文关键词
+
+\pagestyle{enfrontmatterstyle}%
+\cleardoublepage\pagestyle{frontmatterstyle}%
+
+%---------------------------------------------------------------------------%

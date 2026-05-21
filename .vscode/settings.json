@@ -1,0 +1,40 @@
+{
+    "latex-workshop.latex.tools": [
+        {
+            "name": "artratex (Windows)",
+            "command": ".\\artratex.bat",
+            "args": [],
+            "cwd": "%WORKSPACE_FOLDER%"
+        },
+        {
+            "name": "artratex (Unix)",
+            "command": "bash",
+            "args": [
+                "./artratex.sh",
+                "xa",
+                "Thesis"
+            ],
+            "cwd": "%WORKSPACE_FOLDER%"
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "artratex (Windows)",
+            "tools": [
+                "artratex (Windows)"
+            ]
+        },
+        {
+            "name": "artratex (Unix)",
+            "tools": [
+                "artratex (Unix)"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipe.default": "first",
+    "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/Tmp",
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
+    "latex-workshop.message.error.show": true,
+    "latex-workshop.message.warning.show": true
+}
