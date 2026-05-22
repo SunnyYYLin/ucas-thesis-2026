@@ -136,6 +136,13 @@
   \renewcommand\chaptername{附录}%
   \renewcommand\thechapter{附录\zhnum{app}}%
   \setcounter{section}{0}%
+  \ifnum\ucas@appendix@total>1\relax
+    \renewcommand\thesection{附录\zhnum{app}.\arabic{section}}%
+  \else
+    \renewcommand\thesection{附录.\arabic{section}}%
+  \fi
+  \renewcommand\theHsection{appendix.\arabic{app}.\arabic{section}}%
+  \renewcommand\theHsubsection{appendix.\arabic{app}.\arabic{section}.\arabic{subsection}}%
 }
 \newcommand{\appendixchapter}[1]{%
   \ifnum\value{app}=0\relax
