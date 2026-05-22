@@ -1,16 +1,4 @@
-\stepcounter{app}
-\setcounter{app_fig}{0}
-\setcounter{app_tab}{0}
-\setcounter{equation}{0}
-\renewcommand\theequation{附\arabic{app}-\arabic{equation}}
-% \renewcommand\theequation{\Alph{app}.\arabic{equation}}
-\renewcommand\chaptername{附录}
-\renewcommand\chaptername{Appendix} 
-\renewcommand\thechapter{附录\zhnum{app}} 
-
-\setcounter{chapter}{0}
-\setcounter{section}{0}
-\chapter{附录中的公式}\label{chap:app1}{
+\appendixchapter{附录中的公式}\label{chap:app1}{
 
 对公式的引用如，公式\eqref{eq:appedns}
 \begin{equation} \label{eq:appedns}
@@ -48,10 +36,7 @@ tensor: $\Tensor{\sigma, T, a, F, n}$, unittensor: $\unitTensor{\sigma, T, a, F,
 
 
 }
-\chapter{附录中的图表}{
-\stepcounter{app}
-\setcounter{app_fig}{0}
-\setcounter{app_tab}{0}
+\appendixchapter{附录中的图表}{
 
 
 附表测试

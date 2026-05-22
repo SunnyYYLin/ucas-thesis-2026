@@ -122,6 +122,41 @@
 \setcounter{app}{0}
 \renewcommand\theappfig{\arabic{app}-\arabic{app_fig}}  
 \renewcommand\theapptab{\arabic{app}-\arabic{app_tab}} 
+
+\providecommand{\ucas@appendix@total}{1}
+\newcommand{\ucas@record@appendix@total}{%
+  \protected@write\@auxout{}%
+    {\string\gdef\string\ucas@appendix@total{\arabic{app}}}%
+}
+\newcommand{\ucas@appendix@setup}{%
+  \setcounter{app_fig}{0}%
+  \setcounter{app_tab}{0}%
+  \setcounter{equation}{0}%
+  \renewcommand\theequation{附\arabic{app}-\arabic{equation}}%
+  \renewcommand\chaptername{附录}%
+  \renewcommand\thechapter{附录\zhnum{app}}%
+  \setcounter{section}{0}%
+}
+\newcommand{\appendixchapter}[1]{%
+  \ifnum\value{app}=0\relax
+    \setcounter{chapter}{0}%
+  \fi
+  \stepcounter{app}%
+  \ucas@appendix@setup%
+  \ucas@record@appendix@total%
+  \ifnum\ucas@appendix@total>1\relax
+    \chapter{#1}%
+  \else
+    \phantomsection%
+    \addcontentsline{toc}{chapter}{附录\quad #1}%
+    \thispagestyle{appendixheader}%
+    \vspace*{7pt}%
+    \begin{center}%
+      {\linespread{1.0}\zihao{4}\bfseries\sffamily 附录\quad #1}%
+    \end{center}%
+    \vspace{18pt}%
+  \fi
+}
  
 \renewcommand{\labelenumi}{(\arabic{enumi}) }
 \renewcommand{\labelenumii}{(\arabic{enumi}).\arabic{enumii}}
@@ -149,7 +184,7 @@
 
 \fancypagestyle{appendixheader}{
   \fancyhf{}
-  \fancyhead[CO]{\footnotesize 附\quad 录}%此处填写中文标题
+  \fancyhead[CO]{\footnotesize 附录}%此处填写中文标题
   \fancyhead[CE]{\footnotesize \@title}%此处填写中文标题
   \fancyfoot[C]{\footnotesize \thepage}% page number
     \renewcommand{\headrulewidth}{0.8pt}% header rule
