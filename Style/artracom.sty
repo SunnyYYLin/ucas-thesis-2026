@@ -184,9 +184,9 @@
 
 \fancypagestyle{appendixheader}{
   \fancyhf{}
-  \fancyhead[CO]{\footnotesize 附录}%此处填写中文标题
+  \fancyhead[CO]{\footnotesize 附\quad 录}%此处填写中文标题
   \fancyhead[CE]{\footnotesize \@title}%此处填写中文标题
-  \fancyfoot[C]{\footnotesize \thepage}% page number
+  \fancyfoot[C]{\footnotesize \ifnumodd{\value{page}}{\hspace*{\fill}\thepage}{\thepage\hspace*{\fill}}}% page number
     \renewcommand{\headrulewidth}{0.8pt}% header rule
     \renewcommand{\footrulewidth}{0pt}% footer rule
 }
