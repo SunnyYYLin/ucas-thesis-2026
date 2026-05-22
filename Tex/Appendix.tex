@@ -1,6 +1,6 @@
 \stepcounter{app}
-\setcounter{app_fig}{1}
-\setcounter{app_tab}{1}
+\setcounter{app_fig}{0}
+\setcounter{app_tab}{0}
 \setcounter{equation}{0}
 \renewcommand\theequation{附\arabic{app}-\arabic{equation}}
 % \renewcommand\theequation{\Alph{app}.\arabic{equation}}
@@ -50,15 +50,15 @@ tensor: $\Tensor{\sigma, T, a, F, n}$, unittensor: $\unitTensor{\sigma, T, a, F,
 }
 \chapter{附录中的图表}{
 \stepcounter{app}
-\setcounter{app_fig}{1}
-\setcounter{app_tab}{1}
+\setcounter{app_fig}{0}
+\setcounter{app_tab}{0}
 
 
 附表测试
 
 \begin{apptab}[!htbp]
-    \bicaption{\enspace 这是一个样表}{\enspace This is a sample table}
     \stepcounter{app_tab}
+    \bicaption{\enspace 这是一个样表}{\enspace This is a sample table}
     \label{apptab:1}
     \centering
     \footnotesize% fontsize
@@ -76,8 +76,8 @@ tensor: $\Tensor{\sigma, T, a, F, n}$, unittensor: $\unitTensor{\sigma, T, a, F,
 
 
 \begin{apptab}[!htbp]
-    \bicaption{\enspace 这是一个样表}{\enspace This is a sample table}
     \stepcounter{app_tab}
+    \bicaption{\enspace 这是一个样表}{\enspace This is a sample table}
     \label{apptab:2}
     \centering
     \footnotesize% fontsize
@@ -98,11 +98,11 @@ tensor: $\Tensor{\sigma, T, a, F, n}$, unittensor: $\unitTensor{\sigma, T, a, F,
 \begin{appfig}[!htbp]
     \centering
     \includegraphics[width=0.40\textwidth]{c06h06}
+    \stepcounter{app_fig}
     \bicaption{\enspace 这是一个样图}{\enspace This is a sample figure}
     \fignote{对图片的注释}
     
     \label{appfig:1}
-    \stepcounter{app_fig}
 \end{appfig}
 
 % \begin{appfig}[!htbp]

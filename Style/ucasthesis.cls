@@ -651,6 +651,13 @@
         afterskip = {6pt},
     }
 }
+%- paragraph
+\renewcommand\paragraph{%
+    \@startsection{paragraph}{4}{2em}%
+      {6pt}%
+      {0.5\baselineskip}%
+      {\linespread{1.0}\zihao{-4}\sffamily\raggedright}%
+}
 %- appendix
 \ctexset {
     appendix = {
